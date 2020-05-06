@@ -1,5 +1,6 @@
 import React from 'react';
 import TaskList from './TaskList';
+import PropTypes from 'prop-types';
 
 export default class Card extends React.Component {
     constructor(){
@@ -39,4 +40,12 @@ export default class Card extends React.Component {
           </div>
         )
     }
+}
+
+Card.propTypes = {
+    // Custom Prop Validator
+    title: (props, propName, component) => (!props[propName] || typeof props[propName] !== 'string' || props[propName].length > 50) ? new Error(`${ propName } in ${ component } is longer than 50 Characters`) : null,
+    description: PropTypes.string.isRequired,
+    color: PropTypes.string,
+    task: PropTypes.arrayOf(PropTypes.object)
 }

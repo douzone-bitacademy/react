@@ -21,3 +21,4 @@ ul      { list-style-type: none; padding: 0; margin: 0; }
 
 .TaskList__Task:first-child    { margin-top: 10px; padding-top: 10px; border-top: dashed 1px #ddd; }
 .TaskList__Task--remove:after  { display: inline-block; color: #d66; content: '✖'; }
+.TaskList--add-task            { border:1px dashed #bbb; width:100%; padding:10px; margin-top: 5px; border-radius: 3px }

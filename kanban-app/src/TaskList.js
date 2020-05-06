@@ -1,6 +1,6 @@
 
 import React from 'react';
-
+import PropTypes from 'prop-types';
 
 export default class TaskList extends React.Component {
     render() {
@@ -16,7 +16,12 @@ export default class TaskList extends React.Component {
                 <ul>
                     { taskComponents }
                 </ul>
+                <input type='text' className='TaskList--add-task' placeholder='새태스크' />
              </div>
         )
     }
+}
+
+TaskList.propTypes = {
+    tasks: PropTypes.arrayOf(PropTypes.object)
 }
