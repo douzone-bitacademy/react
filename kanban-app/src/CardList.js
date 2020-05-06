@@ -7,6 +7,7 @@ export default class CardList extends React.Component {
         this.props.cards.forEach(card => cardComponents.push(<Card
             key={ card.id }
             title={ card.title }
+            color={ card.color }
             description={ card.description }
             tasks={ card.tasks }
         />));
