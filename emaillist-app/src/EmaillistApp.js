@@ -35,10 +35,10 @@ export default class EmaillistApp extends React.Component {
 
     componentDidMount() {
         console.log('EmaillistApp:componentDidMount()');
-        fetch('http://localhost:8888/data.json')
+        fetch('http://localhost:8888/emaillist')
         .then( response => response.json())
         .then( json => this.setState({
-            emails: json
+            emails: json.data
         }))
         .catch( err => console.error( err ));
     }
