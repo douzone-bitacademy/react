@@ -22,5 +22,6 @@ let updateOrder2 = Object.assign({}, state.order, {
     receive: '서울시 강남구 논현동....'
 });
 
+
 console.log(state.order, updateOrder2, updateOrder2 === state.order );
 //====================================================================

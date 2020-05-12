@@ -23,14 +23,14 @@ emails.push({});
 해결 방법:
 1. 비파괴 배열 메소드 및 연산자: map, filter, concat, ...(ES6 spread 연산자 활용) -> ex01
 2. Object.assign 을 이용해 변경이 적용된 객체를 새로 생성하는 방법 -> ex02
-3. 1, 2는 Nest Object 가 있는 경우 까다롭다 -> project-ex01.ex03
+3. 1, 2는 Nest Object 가 있는 경우 까다롭다 -> ex03
     1) Object.assign은 deep copy 지원 안함
     2) deep clone을 뜨는 방법은 비용이 비싸다.
     3) 직접 하는 방법은 관리가 어렵고 코드에 실수가 있을 가능 성 많음
 4. 이는 자바스크립트가 원래 저따위이기 때문에 어쩔 수 없다.
 
 찐해결 방법:
-React Addon에 복잡하고 중첩된 객체의 변경을 도와주는 immutablity helper 함수를 사용하는 것이다. -> project-ex01.ex04
+React Addon에 복잡하고 중첩된 객체의 변경을 도와주는 immutablity helper 함수를 사용하는 것이다. ->ex04
 
 1) npm i -D react-addons-update    
 2) import update from 'react-addons-update';

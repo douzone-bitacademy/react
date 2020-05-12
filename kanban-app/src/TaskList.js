@@ -5,6 +5,13 @@ import PropTypes from 'prop-types';
 import styles from './TaskList.css';
 
 export default class TaskList extends React.Component {
+    onInputKeyPress(event) {
+        if(event.key == 'Enter'){
+            this.props.taskCallbacks.add(this.props.cardId, event.target.value);
+            event.target.value = '';
+        }
+    }
+
     render() {
         return (
             <div>
@@ -20,7 +27,8 @@ export default class TaskList extends React.Component {
                 <input
                     type='text'
                     className={ styles['Input--add-task'] }
-                    placeholder='새태스크' />
+                    placeholder='새태스크'
+                    onKeyPress={ this.onInputKeyPress.bind(this) } />
              </div>
         )
     }
