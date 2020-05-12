@@ -1,0 +1,28 @@
+.Card                   { position: relative; z-index: 1; background: #fff; width: 100%; padding: 10px 10px 10px 15px; margin: 0 0 10px 0; overflow: auto; border: 1px solid #e5e5df; border-radius: 3px; box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); }
+.Title                  { font-weight: bold; border-bottom: solid 5px transparent; }
+.Title:before           { display: inline-block; width: 1em; content: '▸'; }
+.Title--is-open:before  { content: '▾'; }
+
+.Card .SideBar--todo,
+.Card .SideBar--done,
+.Card .SideBar--in-progress {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 7px;
+}
+
+.SideBar--todo {
+    background-color: #3a7e28
+}
+
+.SideBar--done {
+    background-color: #222
+}
+
+.SideBar--in-progress {
+    background-color: #bd8d31
+}
+

@@ -3,7 +3,6 @@
       "id": 1,
       "title": "DB Scheme Design",
       "description": "프로젝트 Database 논리 모델링 작업",
-      "color": "#bd8d31",
       "status": "in-progress",
       "tasks": []
     },
@@ -11,7 +10,6 @@
         "id": 2,
         "title": "Stroy Board 작성",
         "description": "기능 기반의 화면 목업 작업",
-        "color": "#222",
         "status": "done",
         "tasks": []
     },    
@@ -19,7 +17,6 @@
       "id": 3,
       "title": "React Study",
       "description": "React.JS 공부 하기 ",
-      "color": "#3a7e28",
       "status": "todo",
       "tasks": [
         {
@@ -43,7 +40,6 @@
         "id": 4,
         "title": "View Publishing",
         "description": "화면 HTML CSS publishing 하기",
-        "color": "#3a7e28",
         "status": "todo",
         "tasks": [
           {

@@ -2,21 +2,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import styles from './TaskList.css';
+
 export default class TaskList extends React.Component {
     render() {
-        let taskComponents = [];
-        this.props.tasks.forEach(task => taskComponents.push(<li className='TaskList__Task'>
-            <input type='checkbox' defaultChecked={ task.done } />
-            { task.name }
-            <a href='#' className='TaskList__Task--remove' />
-        </li>));
-
         return (
-            <div className='TaskList'>
+            <div>
                 <ul>
-                    { taskComponents }
+                    { this.props.tasks.map(task => <li
+                            key={ task.id } 
+                            className={ styles.Task }>
+                            <input type='checkbox' defaultChecked={ task.done } />
+                            { task.name }
+                            <a href='#' className={ styles['Task--remove'] } />
+                        </li>) }
                 </ul>
-                <input type='text' className='TaskList--add-task' placeholder='새태스크' />
+                <input
+                    type='text'
+                    className={ styles['Input--add-task'] }
+                    placeholder='새태스크' />
              </div>
         )
     }
